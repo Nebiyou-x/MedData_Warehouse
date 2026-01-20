@@ -1,0 +1,22 @@
+# Environment
+.env
+__pycache__/
+*.pyc
+
+# Data
+data/
+logs/
+
+# dbt
+medical_warehouse/target/
+medical_warehouse/dbt_packages/
+medical_warehouse/logs/
+
+# Python
+.venv/
+env/
+venv/
+
+# OS
+.DS_Store
+EOF
