@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: telegram
+    database: medical_warehouse
+    schema: raw
+    tables:
+      - name: telegram_messages
+        description: "Raw scraped Telegram messages."
+
+
+      
+      - name: yolo_detections
+        description: "Objects detected in message images using YOLOv8."
+        columns:
+          - name: message_id
+            tests:
+              - unique
+              - not_null
