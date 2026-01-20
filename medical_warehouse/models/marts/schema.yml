@@ -1,0 +1,31 @@
+version: 2
+sources: 
+  - name: public
+    schema: public
+    tables: 
+      - name: RawData
+
+models: 
+  - name: MedData_Transformed
+    description: "Med Data Transformed"
+    columns:
+      - name: media_path
+        description: "Media Path"
+        data_tests:
+          - not_null    
+
+      - name: date
+        description: "Date of the message"
+        data_tests:
+          - not_null
+
+      - name: message
+        description: "Message from telegram"
+        data_tests:
+          - not_null
+
+      - name: channel_username
+        description: "The telegram channel username"
+        data_tests:
+          - not_null
+      
